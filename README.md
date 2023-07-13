@@ -1,3 +1,17 @@
+## setup
+
+1. install [packer](https://github.com/wbthomason/packer.nvim):
+```
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+```
+2. open neovim and install packages:
+```
+:PackerInstall
+```
+3. install [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
+4. **typescript/javascript only** - install [typeScript-language-server](https://github.com/typescript-language-server/typescript-language-server)
+5. if there are missing icons, you need to change terminal font (e.g. [nerd fonts](https://www.nerdfonts.com/))
 ## what's inside
 ### 📦 plugin/package management
 * [wbthomason/packer.nvim](https://github.com/wbthomason/packer.nvim)
@@ -19,17 +33,3 @@
 * [saadparwaiz1/cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)
 * [L3MON4D3/LuaSnip](https://github.com/L3MON4D3/LuaSnip)
 * [rafamadriz/friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
-## setup
-
-1. install [packer](https://github.com/wbthomason/packer.nvim):
-```
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-```
-2. open neovim and install packages:
-```
-:PackerInstall
-```
-3. install [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
-4. **typescript/javascript only** - install [typeScript-language-server](https://github.com/typescript-language-server/typescript-language-server)
-5. if there are missing icons, you need to change terminal font (e.g. [nerd fonts](https://www.nerdfonts.com/))
