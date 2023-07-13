@@ -30,4 +30,6 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 ```
 :PackerInstall
 ```
-3. if there are missing icons, you need to change terminal font (e.g. [nerd fonts](https://www.nerdfonts.com/))
+3. install [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
+4. **typescript/javascript only** - install [typeScript-language-server](https://github.com/typescript-language-server/typescript-language-server)
+5. if there are missing icons, you need to change terminal font (e.g. [nerd fonts](https://www.nerdfonts.com/))
