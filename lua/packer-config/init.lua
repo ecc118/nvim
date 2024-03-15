@@ -33,4 +33,5 @@ return require'packer'.startup(function()
   use 'folke/tokyonight.nvim'
   use 'xiyaowong/transparent.nvim'
   use 'olivercederborg/poimandres.nvim'
+  use {"shortcuts/no-neck-pain.nvim", tag = "*" }
 end)
