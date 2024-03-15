@@ -1,7 +1,7 @@
 require('packer-config')
 require('settings')
 require('mappings')
-require('colorschemes-config.tokyonight')
+require('colorschemes-config.poimandres')
 require('treesitter')
 require('lsp-config.language-servers')
 require('lsp-config.nvim-cmp')

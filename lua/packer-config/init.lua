@@ -32,4 +32,5 @@ return require'packer'.startup(function()
   use 'zefei/cake16'
   use 'folke/tokyonight.nvim'
   use 'xiyaowong/transparent.nvim'
+  use 'olivercederborg/poimandres.nvim'
 end)
