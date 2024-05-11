@@ -22,7 +22,6 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 * [hrsh7th/cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
 ### 🔎 file management
 * [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
-* [nvim-neo-tree/neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)
 * [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)
 ### 💅 eye candy
 * [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)

@@ -2,15 +2,6 @@ return require'packer'.startup(function()
   use 'wbthomason/packer.nvim'
   use 'EdenEast/nightfox.nvim'
   use 'nvim-treesitter/nvim-treesitter'
-  use {
-  "nvim-neo-tree/neo-tree.nvim",
-    branch = "v2.x",
-    requires = { 
-      "nvim-lua/plenary.nvim",
-      "kyazdani42/nvim-web-devicons",
-      "MunifTanjim/nui.nvim",
-    }
-  }
 
   use 'neovim/nvim-lspconfig'
   use 'hrsh7th/nvim-cmp'
