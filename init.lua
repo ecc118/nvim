@@ -1,6 +1,7 @@
 require('packer-config')
 require('settings')
 require('mappings')
+require('remap')
 require('colorschemes-config.poimandres')
 require('treesitter')
 require('lsp-config.language-servers')
