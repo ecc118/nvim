@@ -39,11 +39,14 @@ local lsp_flags = {
   -- This is the default in Nvim 0.7+
   debounce_text_changes = 150,
 }
-require('lspconfig')['lua_ls'].setup{}
-require('lspconfig')['tsserver'].setup{
+vim.lsp.config("lua_ls", {})
+
+vim.lsp.enable("lua_ls")
+vim.lsp.config("ts_ls", {
   on_attach = on_attach,
   flags = lsp_flags,
   filetypes = { "javascript", "typescript", "typescriptreact", "typescript.tsx" },
   -- cmd = { "typescript-language-server", "--stdio" },
   capabilities = capabilities
-}
+})
+vim.lsp.enable("ts_ls")
