@@ -37,5 +37,6 @@ return require'packer'.startup(function()
   use 'olivercederborg/poimandres.nvim'
   use 'navarasu/onedark.nvim'
   use 'oskarnurm/koda.nvim'
+  use 'NLKNguyen/papercolor-theme'
   use {"shortcuts/no-neck-pain.nvim", tag = "*" }
 end)
