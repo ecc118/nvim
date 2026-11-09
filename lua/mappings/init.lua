@@ -4,7 +4,13 @@ local opts = { noremap = true, silent = true }
 
 vim.g.mapleader = ' '
 
-map('n', '<leader>n', ':Ex<CR>', opts)
+vim.keymap.set('n', '<leader>n', function()
+  local file = vim.fn.expand('%:t')
+  vim.cmd('Explore')
+  if file ~= '' then
+    vim.fn.search([[\V\(\^\|\s\)]] .. vim.fn.escape(file, [[\]]) .. [[\[*@/]\=\(\s\|\$\)]], 'w')
+  end
+end, opts)
 map('n', '<leader>ff', ':Telescope find_files<CR>', opts)
 map('n', '<leader>fd', ':Telescope live_grep<CR>', opts)
 map('n', '<leader>fa', ':Telescope buffers<CR>', opts)
