@@ -26,7 +26,10 @@ return require'packer'.startup(function()
   }
   use {
     'nvim-telescope/telescope.nvim', tag = '*',
-    requires = { {'nvim-lua/plenary.nvim'} }
+    requires = { {'nvim-lua/plenary.nvim'} },
+    config = function()
+      require("telescope-config")
+    end,
   }
   use 'lewis6991/gitsigns.nvim'
   use 'tpope/vim-fugitive'
