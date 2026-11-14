@@ -3,6 +3,7 @@ return require'packer'.startup(function()
   use 'EdenEast/nightfox.nvim'
   use {
     "nvim-treesitter/nvim-treesitter",
+    branch = "main",
     run = ":TSUpdate",
     config = function()
       require("treesitter")
@@ -42,4 +43,10 @@ return require'packer'.startup(function()
   use 'oskarnurm/koda.nvim'
   use 'NLKNguyen/papercolor-theme'
   use {"shortcuts/no-neck-pain.nvim", tag = "*" }
+  use {
+    'nvim-mini/mini.tabline',
+    config = function()
+      require("tabline-config")
+    end,
+  }
 end)
