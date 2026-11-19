@@ -34,7 +34,6 @@ return require'packer'.startup(function()
   }
   use 'lewis6991/gitsigns.nvim'
   use 'tpope/vim-fugitive'
-  use 'feline-nvim/feline.nvim'
   use 'zefei/cake16'
   use 'folke/tokyonight.nvim'
   use 'xiyaowong/transparent.nvim'

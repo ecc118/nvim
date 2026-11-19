@@ -27,7 +27,6 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 * [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 * [folke/tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
 * [lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
-* [feline-nvim/feline.nvim](https://github.com/famiu/feline.nvim)
 ### 💡 snippets
 * [saadparwaiz1/cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)
 * [L3MON4D3/LuaSnip](https://github.com/L3MON4D3/LuaSnip)
