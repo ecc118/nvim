@@ -13,7 +13,6 @@ set.backup = false
 
 set.incsearch = true
 set.cursorline = true
-set.hlsearch = false
 
 set.splitbelow = true
 set.splitright = true

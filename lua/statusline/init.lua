@@ -35,8 +35,34 @@ function _G.rel_dir()
   return vim.fn.fnamemodify(dir, ":~") .. "/"
 end
 
+function _G.recording()
+  local reg = vim.fn.reg_recording()
+  return reg ~= "" and ("recording @" .. reg) or ""
+end
+
+function _G.search_count()
+  if vim.v.hlsearch == 0 then return "" end
+  local ok, s = pcall(vim.fn.searchcount, { maxcount = 999, timeout = 50 })
+  if not ok or s.total == 0 then return "" end
+  return string.format("[%d/%d]", s.current, s.total)
+end
+
+vim.api.nvim_create_autocmd({ "RecordingEnter", "RecordingLeave" }, {
+  callback = function() vim.schedule(function() vim.cmd.redrawstatus() end) end,
+})
+
 vim.api.nvim_set_hl(0, "StatusMode", { bold = true })
 
+vim.o.cmdheight = 0
+vim.o.showcmdloc = "statusline"
 vim.o.laststatus = 3
 vim.o.showmode = false
-vim.o.statusline = "%#StatusMode#%{v:lua.mode_name()}%*%( %{&modified ? '*' : ''}%) %{v:lua.rel_dir()}"
+vim.o.statusline = table.concat({
+  "%#StatusMode#%{v:lua.mode_name()}%*",  -- mode
+  "%( %{&modified ? '*' : ''}%)",         -- * when unsaved
+  "%( %S%)",                              -- pending keys / selection size
+  "%( %{v:lua.recording()}%)",            -- recording
+  "%( %{v:lua.search_count()}%)",         -- search count
+  "%=",                                   -- everything after this goes right
+  "%{v:lua.rel_dir()} ",                  -- folder
+})

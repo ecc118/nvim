@@ -1,3 +1,7 @@
+vim.keymap.set("n", "<Esc>", function()
+  vim.schedule(function() vim.cmd("nohlsearch | redrawstatus") end)
+end, opts)
+
 local map = vim.api.nvim_set_keymap
 
 local opts = { noremap = true, silent = true }
