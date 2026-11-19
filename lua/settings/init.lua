@@ -22,11 +22,13 @@ set.guicursor = 'i:block'
 
 set.nu = true
 set.relativenumber = false
-set.statuscolumn = "%s%=%{v:virtnum ? '' : v:lnum}   "
+set.statuscolumn = "%s%=%{v:virtnum ? '' : v:lnum}  "
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "fugitive",
   command = "setlocal statuscolumn= nonumber",
 })
+set.list = true
+set.listchars = { tab = "⇥ " }
 
 set.hidden = true
 
