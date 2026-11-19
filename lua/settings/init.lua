@@ -28,7 +28,7 @@ vim.api.nvim_create_autocmd("FileType", {
   command = "setlocal statuscolumn= nonumber",
 })
 set.list = true
-set.listchars = { tab = "⇥ " }
+set.listchars = { tab = "→ " }
 
 set.hidden = true
 
