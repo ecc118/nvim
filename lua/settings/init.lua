@@ -31,4 +31,4 @@ vim.api.nvim_create_autocmd("FileType", {
 set.hidden = true
 
 vim.opt.fillchars:append({ eob = " " })
-vim.api.nvim_set_hl(0, "WinSeparator", { link = "NonText" })
+vim.api.nvim_set_hl(0, "WinSeparator", { link = "LineNr" })
