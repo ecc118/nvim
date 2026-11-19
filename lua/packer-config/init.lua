@@ -1,7 +1,14 @@
 return require'packer'.startup(function()
   use 'wbthomason/packer.nvim'
   use 'EdenEast/nightfox.nvim'
-  use 'nvim-treesitter/nvim-treesitter'
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    branch = "main",
+    run = ":TSUpdate",
+    config = function()
+      require("treesitter")
+    end,
+  }
 
   use {
     'williamboman/mason.nvim',
@@ -15,19 +22,30 @@ return require'packer'.startup(function()
   use 'L3MON4D3/LuaSnip'
   use 'rafamadriz/friendly-snippets'
   use {
-    "jose-elias-alvarez/null-ls.nvim",
+    "nvimtools/none-ls.nvim",
       requires = { "nvim-lua/plenary.nvim" },
   }
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.5',
-    requires = { {'nvim-lua/plenary.nvim'} }
+    'nvim-telescope/telescope.nvim', tag = '*',
+    requires = { {'nvim-lua/plenary.nvim'} },
+    config = function()
+      require("telescope-config")
+    end,
   }
   use 'lewis6991/gitsigns.nvim'
   use 'tpope/vim-fugitive'
-  use 'feline-nvim/feline.nvim'
   use 'zefei/cake16'
   use 'folke/tokyonight.nvim'
   use 'xiyaowong/transparent.nvim'
   use 'olivercederborg/poimandres.nvim'
+  use 'navarasu/onedark.nvim'
+  use 'oskarnurm/koda.nvim'
+  use 'NLKNguyen/papercolor-theme'
   use {"shortcuts/no-neck-pain.nvim", tag = "*" }
+  use {
+    'nvim-mini/mini.tabline',
+    config = function()
+      require("tabline-config")
+    end,
+  }
 end)

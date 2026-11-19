@@ -13,7 +13,6 @@ set.backup = false
 
 set.incsearch = true
 set.cursorline = true
-set.hlsearch = false
 
 set.splitbelow = true
 set.splitright = true
@@ -22,9 +21,16 @@ set.signcolumn = 'yes'
 set.guicursor = 'i:block'
 
 set.nu = true
-set.relativenumber = true
-set.cursorline = true
+set.relativenumber = false
+set.statuscolumn = "%s%=%{v:virtnum ? '' : v:lnum}  "
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "fugitive",
+  command = "setlocal statuscolumn= nonumber",
+})
+set.list = true
+set.listchars = { tab = "→ " }
 
 set.hidden = true
 
-vim.wo.fillchars='eob: '
+vim.opt.fillchars:append({ eob = " " })
+vim.api.nvim_set_hl(0, "WinSeparator", { link = "LineNr" })

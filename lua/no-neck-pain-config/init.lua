@@ -5,7 +5,8 @@ require("no-neck-pain").setup({
   },
   buffers = {
     wo = {
-        fillchars = "eob: ",
+      statuscolumn = "",
+      fillchars = "eob: ,vert:│,horiz: ,horizup: ,horizdown: ,vertleft:│,vertright: ,verthoriz: "
     },
   },
 })
